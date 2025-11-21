@@ -1,6 +1,5 @@
-IF YOU DOWNLOAD THIS REPOSITORY, WITH POPULATED CHROMADB, DON'T RUN ALL THE CELLS!
-YOU ONLY NEED TO RUN THE FIRST THREE CELLS AND THE LAST 2 of assistente_etr500_v1.
+Enjoy with your local chatrAIn assistant
 
-The second dont have this problem.
+In the first file you can found a code to populate the vector db and the first version of chat bot.
 
-Enjoy with your local assistant for ETR500!
+In the second version, after a creation of vector db, you have the last and more fixed version.
