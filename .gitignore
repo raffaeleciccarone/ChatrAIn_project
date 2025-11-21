@@ -1,0 +1,6 @@
+.venv
+__pycache__/
+ETR_500.pdf
+chroma_db_data
+*.log
+.DS_Store
