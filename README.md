@@ -1,4 +1,6 @@
-# ChatrAIn
+# ChatrAIn      
+
+/Users/raffaeleciccarone/Desktop/ASSISTENTE MANUTENTORE/1.jpg     
 
 > In the first file, you can find the code to populate the vector DB and the first version of the chatbot.
 
@@ -26,7 +28,9 @@ Embedding: Utilization of the BGE-M3 model for high-precision vectorization.
 Integration with Ollama (Llama 3.2 / Granite) with response streaming.
 
 * Benchmarking: 
-Automatic logging system on Pandas to compare latency and response quality across different models.
+Automatic logging system on Pandas to compare latency and response quality across different models.   
+
+/Users/raffaeleciccarone/Desktop/ASSISTENTE MANUTENTORE/2.jpg   
 
 ## Technologies Used
 
@@ -83,6 +87,8 @@ Open the notebook and follow the cells:
 
 jupyter notebook ChatrAIn_assistant_v1.ipynb
 
-* Project created by Raffaele Ciccarone for the Generative AI & LLM course held by IBM
+* Project created by Raffaele Ciccarone for the Generative AI & LLM course held by IBM     
 
+
+/Users/raffaeleciccarone/Desktop/ASSISTENTE MANUTENTORE/3.jpg
 ##Enjoy your local ChatrAIn assistant!##
