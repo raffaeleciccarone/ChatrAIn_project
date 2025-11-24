@@ -1,5 +1,10 @@
 # 🚅 ChatrAIn - Local RAG for Railway Maintenance
-
+![Logo app](img/contact-pic.png)
+    
+## APP PREVIEW
+    
+![Chat screenshot](img/screenshot_webapp.png)
+     
 **ChatrAIn** is an intelligent assistant designed to support railway maintenance workers by querying technical manuals via natural language. 
 
 > **Evolution Note:** This project started as a prototype on Jupyter Notebooks (still available in `notebooks/`) and has evolved into a **modular, production-oriented Python architecture**.
@@ -67,3 +72,10 @@ After db creation ---> python main.py
 * Project created by Raffaele Ciccarone for the Generative AI & LLM course held by IBM     
 
 ##Enjoy your local ChatrAIn assistant!##
+
+-------------------------------------------------------------------------
+# Copyright (c) 2025 Raffaele Ciccarone
+# This code is the intellectual property of Raffaele Ciccarone.
+# It is strictly prohibited to copy, distribute, or modify this file
+# without distinct written permission from the owner.
+# -------------------------------------------------------------------------

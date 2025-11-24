@@ -1,3 +1,10 @@
+# -------------------------------------------------------------------------
+# Copyright (c) 2025 Raffaele Ciccarone
+# This code is the intellectual property of Raffaele Ciccarone.
+# It is strictly prohibited to copy, distribute, or modify this file
+# without distinct written permission from the owner.
+# -------------------------------------------------------------------------
+
 import os
 import glob
 import fitz #to import pdf
