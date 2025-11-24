@@ -1,64 +1,44 @@
-# ChatrAIn 
-> In the first file, you can find the code to populate the vector DB and the first version of the chatbot.
+# 🚅 ChatrAIn - Local RAG for Railway Maintenance
 
-> In the second version, after the creation of the vector DB, you will find the final and most stable version.
+**ChatrAIn** is an intelligent assistant designed to support railway maintenance workers by querying technical manuals via natural language. 
 
-## Project Description
+> **Evolution Note:** This project started as a prototype on Jupyter Notebooks (still available in `notebooks/`) and has evolved into a **modular, production-oriented Python architecture**.
 
-This project implements an intelligent assistant designed to support railway maintenance workers. Unlike generic chatbots, ChatrAIn answers technical questions based exclusively on the Maintenance Manual used to create the vector DB.
+## 🎯 Project Goal
+Unlike generic chatbots, ChatrAIn answers technical questions based **exclusively** on the provided Maintenance Manuals (Vector DB). 
 
-The entire architecture is designed to run offline (Air-Gapped) on consumer hardware (Apple Silicon M1/M2), ensuring:
+The architecture is fully **Air-Gapped** (Offline) and optimized for consumer hardware (Apple Silicon M1), ensuring:
+* **Total Privacy:** Zero data sent to the cloud.
+* **Zero Hallucinations:** The model admits ignorance if the manual doesn't contain the answer.
 
-* Total Privacy: 
-No data is sent to cloud servers.
+## ⚙️ Key Features
+* **Modular RAG Pipeline:** Decoupled Ingestion and Retrieval logic for scalability.
+* **Smart Chunking:** Powered by **LangChain** to preserve semantic context.
+* **Memory-Safe Ingestion:** Implemented batch processing to prevent OOM crashes on large PDF datasets.
+* **Precision Embedding:** Uses **BGE-M3** (FlagEmbedding) for high-accuracy retrieval.
+* **Automated Benchmarking:** Auto-logging of inference time and responses to CSV for model comparison.
 
-* Zero Hallucinations: 
-The model is constrained to answer only if it finds evidence in the manuals.
+## 🛠 Tech Stack
+* **Core:** Python 3.11+
+* **LLM Runtime:** Ollama (Llama 3, Mistral, Granite)
+* **Vector DB:** ChromaDB (Persistent)
+* **Embedding:** BGE-M3 (BAAI)
+* **Parsing:** PyMuPDF (fitz) & LangChain
+* **Hardware Accel:** Native Apple Metal (MPS) support.
 
-## Key Features 
+## 📂 Project Structure
 
-Advanced Ingestion: Technical PDF parsing with text cleaning and semantic Chunking.
-
-Embedding: Utilization of the BGE-M3 model for high-precision vectorization.
-
-* Optimized Inference Engine: 
-Integration with Ollama (Llama 3.2 / Granite) with response streaming.
-
-* Benchmarking: 
-Automatic logging system on Pandas to compare latency and response quality across different models.   
-
-## Technologies Used
-
-Language: Python 3.11+
-
-LLM Runtime: Ollama (Local)
-
-Vector Database: ChromaDB (Persistent)
-
-Embedding Model: FlagEmbedding (BAAI/bge-m3)
-
-PDF Parsing: PyMuPDF (fitz)
-
-Data Analysis: Pandas, Tqdm
-
-Hardware Acceleration: Native support for Apple Metal (MPS)
-
-## File Structure
-
-* ChatrAIn_assistant_v1.ipynb: 
-The main notebook with the entire RAG pipeline.
-
-* '...'.pdf: 
-The technical manual (Knowledge Base).
-
-* requirements.txt: 
-List of Python dependencies.
-
-* test_risposte.csv: 
-Performance log (Latency/Responses) generated automatically.
-
-* chroma_db_data/: 
-Folder containing the persistent vector database.
+```text
+ChatrAIn_project/
+│
+├── 📂 src/                 # The Engine (Core Logic: Ingestion, Retrieval)
+├── 📂 data/manuals/        # Input: Drop your PDFs here
+├── 📂 db/chroma_db/        # Storage: Persistent Vector Database
+├── 📂 csv_test/            # Logs: Benchmark results
+├── 📂 notebooks/           # Lab: Prototyping and Data Analysis
+│
+├── main.py                 # 🎮 Entry Point: Interactive CLI
+└── requirements.txt        # Dependencies
 
 ## How to use it
 
@@ -80,7 +60,9 @@ pip install -r requirements.txt
 
 Open the notebook and follow the cells:
 
-jupyter notebook ChatrAIn_assistant_v1.ipynb
+jupyter notebook ChatrAIn_bot_gen_ai_injection_vector_db_0.0.2.ipynb
+
+After db creation ---> python main.py
 
 * Project created by Raffaele Ciccarone for the Generative AI & LLM course held by IBM     
 
